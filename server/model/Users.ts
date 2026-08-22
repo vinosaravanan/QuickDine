@@ -16,7 +16,7 @@ const UserSchema = new Schema<IUser>({
      password: {type: String, required:true, minlength:6},
      phone:{ type: String, required:true, minlength:6},
      role:{type: String, enum:["user", "admin", "owner"], default:'user'},
-
+    
 }, {timestamps:true})
 
 UserSchema.set('toJSON', {
